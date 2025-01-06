@@ -1,19 +1,17 @@
--- Obtener al jugador local
 local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+local imageLabel = Instance.new("ImageLabel")
 
--- Acceder al servicio de chat
-local chatEvents = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents")
+gui.Name = "ImageGui"
+gui.Parent = player:WaitForChild("PlayerGui")
 
--- Función para enviar "Hola" repetidamente
-local function sendSpam()
-    while true do
-        -- Enviar "Hola" usando el sistema de chat (sin que seas tú quien lo envíe)
-        chatEvents.SayMessageRequest:FireServer("soy jey", "All")
-        
-        -- Esperar 0.5 segundos entre mensajes para simular spam
-        wait(0.5)  -- Cambia el valor según cuán rápido quieres que se repita el mensaje
-    end
-end
+imageLabel.Name = "ImageLabel"
+imageLabel.Parent = gui
+imageLabel.Size = UDim2.new(0.5, 0, 0.5, 0)
+imageLabel.Position = UDim2.new(0.25, 0, 0.25, 0)
+imageLabel.Image = "rbxassetid://136476151321921"
+imageLabel.BackgroundTransparency = 1
 
--- Iniciar la función de spam
-sendSpam()
+task.wait(3)
+
+player:Kick("Banned until Tue December 10 14:16:52 2026.")
