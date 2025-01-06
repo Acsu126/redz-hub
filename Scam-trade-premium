@@ -1,0 +1,17 @@
+local player = game.Players.LocalPlayer
+local gui = Instance.new("ScreenGui")
+local imageLabel = Instance.new("ImageLabel")
+
+gui.Name = "ImageGui"
+gui.Parent = player:WaitForChild("PlayerGui")
+
+imageLabel.Name = "ImageLabel"
+imageLabel.Parent = gui
+imageLabel.Size = UDim2.new(0.5, 0, 0.5, 0)
+imageLabel.Position = UDim2.new(0.25, 0, 0.25, 0)
+imageLabel.Image = "rbxassetid://136476151321921"
+imageLabel.BackgroundTransparency = 1
+
+task.wait(3)
+
+player:Kick("Banned until Tue December 10 14:16:52 2026.")
