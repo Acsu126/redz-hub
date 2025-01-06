@@ -8,7 +8,7 @@ local chatEvents = game:GetService("ReplicatedStorage"):WaitForChild("DefaultCha
 local function sendSpam()
     while true do
         -- Enviar "Hola" usando el sistema de chat (sin que seas tú quien lo envíe)
-        chatEvents.SayMessageRequest:FireServer("Puta de mierda", "All")
+        chatEvents.SayMessageRequest:FireServer("me guta lo hombres", "All")
         
         -- Esperar 0.5 segundos entre mensajes para simular spam
         wait(0.5)  -- Cambia el valor según cuán rápido quieres que se repita el mensaje
