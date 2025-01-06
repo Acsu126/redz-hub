@@ -1,1 +1,19 @@
+-- Obtener al jugador local
+local player = game.Players.LocalPlayer
 
+-- Acceder al servicio de chat
+local chatEvents = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents")
+
+-- Función para enviar "Hola" repetidamente
+local function sendSpam()
+    while true do
+        -- Enviar "Hola" usando el sistema de chat (sin que seas tú quien lo envíe)
+        chatEvents.SayMessageRequest:FireServer("Puta de mierda", "All")
+        
+        -- Esperar 0.5 segundos entre mensajes para simular spam
+        wait(0.5)  -- Cambia el valor según cuán rápido quieres que se repita el mensaje
+    end
+end
+
+-- Iniciar la función de spam
+sendSpam()
